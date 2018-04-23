@@ -24,7 +24,7 @@ function createWindow() {
     //     slashes: true
     // }))
 
-    win.loadURL('http://office.ptafirm.com')
+    win.loadURL('http://cloud.ptafirm.com')
 
     // Open the DevTools.
     // win.webContents.openDevTools()
