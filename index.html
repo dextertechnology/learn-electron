@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+
+<body>
+    <div class="popup">
+        <h2>Welcome Guest!</h2>
+        <p>Please enter your login and password here</p>
+        <div>
+            <label for="email">Login </label>
+            <input type="text" id="username" value="" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" value="" />
+        </div>
+        <input type="button" value="Log In" />
+        <a class="close" href="#close"></a>
+    </div>
+    <div class="popup">
+        <h2>Register</h2>
+        <p>Please enter your details here</p>
+        <div>
+            <label for="email">Login (Username)</label>
+            <input type="text" id="username" value="" />
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" id="password" value="" />
+        </div>
+        <button onclick="store()" type="button">Sign up </button> or
+        <a href="#login_form" id="login_pop">Log In</a>
+        <a class="close" href="#close"></a>
+    </div>
+    </div>
+    <script>
+        //function to store user name and password
+function store () {
+     var inputUsername= document.getElementById("username");
+     var inputPassword= document.getElementById("password");
+     localStorage.setItem("username", inputUsername.value);
+     localStorage.setItem("password", inputPassword.value);
+    };
+    //function to sign in
+    function login() {
+ var inputUsername = localStorage.getItem("username");
+ var inputPassword = localStorage.getItem("password");
+ if (username != "undefined" || username != "null" || password != "undefined" || password !="null")
+ {
+    document.getElementByID('welcomeMessage').innerHTML = "Welcome " + username + "!";
+    } else
+     document.getElementById('welcomeMessage').innerHTML = "Hello!";
+     }
+    </script>
+</body>
+
+</html>
